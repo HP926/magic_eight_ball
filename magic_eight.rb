@@ -30,10 +30,13 @@ class MagicEight
   	sleep 0.5
     puts "Would you like to play again? y/n"
     answer = gets.chomp.downcase
-    unless answer == "n"
+    if answer == "y"
       user_question
       choose_answer
       loop_game
+    elsif answer == "n"
+    	puts "Goodbye"
+    	exit
     end
   end
 
