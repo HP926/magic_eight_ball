@@ -1,0 +1,2 @@
+class MagicEight
+end
