@@ -2,7 +2,6 @@ require "pry-byebug"
 
 class MagicEight
 
-
   def user_question
       puts "What's your question? or (Q)uit"
       question = gets.chomp.upcase
@@ -25,18 +24,24 @@ class MagicEight
   	puts @answer_list.sample(1)
   end
 
-  def loop_question
+  def loop_game
+  	sleep 0.5
     puts "Would you like to play again? y/n"
     answer = gets.chomp.downcase
     unless answer == "n"
       user_question
       choose_answer
+      loop_game
     end
   end
+
+  def use
+  	user_question
+		choose_answer
+		loop_game
+	end
 end 
  
 
 clone = MagicEight.new
-clone.user_question
-clone.choose_answer
-clone.loop_question
+clone.use
