@@ -16,8 +16,7 @@ class MagicEight
 
 	def initialize() 
 		@answer_list = [
-		"No-friggin-duh.", "Heck no niqqa!", "And why are you asking this to a spherical object?", 
-		"Maybe? If you gave me $100. lols im broke", "Cuz you have no frenz...", "howtf shud i noe?"
+		"Yes, of course!", "No, never.", "I don't know.", "Maybe? We'll see."
 		]
   end
 
