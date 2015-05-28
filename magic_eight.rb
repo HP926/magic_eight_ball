@@ -3,9 +3,10 @@ require "pry-byebug"
 class MagicEight
 
   def user_question
-      puts "What's your question? or (Q)uit"
-      question = gets.chomp.upcase
-    if question == "Q"
+      puts "What's your question? or you may (q)uit."
+      question = gets.chomp.downcase
+    if question == "q"
+    	puts "Goodbye."
       exit
     end
   end
@@ -15,7 +16,8 @@ class MagicEight
 
 	def initialize() 
 		@answer_list = [
-		"Yes, of course!", "No, never.", "I don't know", "Maybe? You'll see."
+		"No-friggin-duh.", "Heck no niqqa!", "And why are you asking this to a spherical object?", 
+		"Maybe? If you gave me $100. lols im broke", "Cuz you have no frenz...", "howtf shud i noe?"
 		]
   end
 
@@ -41,7 +43,7 @@ class MagicEight
 		loop_game
 	end
 end 
- 
+
 
 clone = MagicEight.new
 clone.use
